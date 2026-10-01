@@ -53,7 +53,7 @@ public class SpaceComplexity {
 
         int[][] matrix = new int[n][n];
 
-        System.out.println("Matrix created: " + n + " x " + n);
+        System.out.println("Matrix created: " + matrix.length + " rows.");
     }
 
     public static void main(String[] args) {
