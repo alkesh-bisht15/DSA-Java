@@ -83,3 +83,39 @@ O(2n + 5) → O(n)
 
 O(n² + n) → O(n²)
 ```
+### Now understand why each one has that complexity
+Example	            Extra Space	     Why?
+constantSpace()	    O(1)	        Only a fixed number of variables
+findMax()	        O(1)	        Only max and i; no new structure depending on n
+createArray()	    O(n)	        Creates an array containing n elements
+createCopy()	    O(n)	        Creates a new array of size n
+createMatrix()	    O(n²)	        Creates an n × n matrix
+
+### Important distinction
+
+Look carefully at this:
+```java
+static void findMax(int[] numbers) {
+
+    int max = numbers[0];
+
+    for (int i = 1; i < numbers.length; i++) {
+        ...
+    }
+}
+```
+The input array already exists. We aren't creating another array.
+
+Therefore:
+Space Complexity = O(1)
+Not O(n).
+
+But here:
+```java
+int[] copy = new int[numbers.length];
+```
+we create a new array whose size depends on n, so:
+
+Space Complexity = O(n)
+
+This distinction between input space and auxiliary space is very important in DSA.
