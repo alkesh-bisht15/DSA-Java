@@ -39,7 +39,8 @@ notes, and solutions as I progress through DSA.
 
 | Topic | Status |
 |---|---|
-| Java Basics for DSA | 🔄 In Progress |
+| DSA Fundamentals | 🔄 In Progress |
+| Time & Space Complexity | ✅ Completed |
 | Arrays | ⏳ |
 | Strings | ⏳ |
 | Linked List | ⏳ |
