@@ -8,11 +8,11 @@ notes, and solutions as I progress through DSA.
 ## 🎯 Goals
 
 - Build strong DSA fundamentals
-- Learn problem-solving techniques
+- Develop problem-solving skills
 - Understand time and space complexity
 - Solve problems consistently
 - Prepare for technical interviews
-- Build strong Java problem-solving skills
+- Become comfortable with Java for DSA
 
 ## 🛠️ Language
 
@@ -39,9 +39,9 @@ notes, and solutions as I progress through DSA.
 
 | Topic | Status |
 |---|---|
-| DSA Fundamentals | 🔄 In Progress |
-| Time & Space Complexity | ✅ Completed |
-| Arrays | ⏳ |
+| DSA Basics | ✅ |
+| Time & Space Complexity | ✅ |
+| Array Basics | ✅ |
 | Strings | ⏳ |
 | Linked List | ⏳ |
 | Stack | ⏳ |
@@ -52,17 +52,33 @@ notes, and solutions as I progress through DSA.
 | Graphs | ⏳ |
 | Dynamic Programming | ⏳ |
 
----
+## 🗓️ Learning Progress
 
-## 📝 Learning Approach
+### Day 1 — DSA Fundamentals & Array Basics ✅
 
-For every topic, I will:
+Topics learned:
+
+- Time Complexity
+- Space Complexity
+- Array Traversal
+- Find Maximum
+- Find Minimum
+- Linear Search
+- Reverse Array
+- Second Largest Element
+- Check if Array is Sorted
+- Count Occurrences in an Array
+
+### Learning Approach
+
+For every topic, I aim to:
 
 1. Understand the concept
 2. Implement it from scratch
-3. Analyze time and space complexity
-4. Solve practice problems
-5. Document important patterns and mistakes
+3. Analyze time complexity
+4. Analyze space complexity
+5. Solve practice problems
+6. Document important patterns and mistakes
 
 ---
 
