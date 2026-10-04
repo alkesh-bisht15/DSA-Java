@@ -42,6 +42,7 @@ notes, and solutions as I progress through DSA.
 | DSA Basics | ✅ |
 | Time & Space Complexity | ✅ |
 | Array Basics | ✅ |
+| Array Fundamentals | ✅ |
 | Strings | ⏳ |
 | Linked List | ⏳ |
 | Stack | ⏳ |
@@ -68,6 +69,21 @@ Topics learned:
 - Second Largest Element
 - Check if Array is Sorted
 - Count Occurrences in an Array
+
+### Day 2 — Array Fundamentals ✅
+
+- Array Access
+- Array Search
+- Array Insertion
+- Array Deletion
+- In-Place Operations
+- Extra Space
+- Running Sum
+- Prefix Sum Thinking
+- Array Sum
+- Array Average
+- Count Positive & Negative
+- Maximum-Minimum Difference
 
 ### Learning Approach
 
