@@ -1,384 +1,125 @@
-# Array Fundamentals
 
-This section contains the concepts learned during DSA Day 2.
+# Array Fundamentals — Theory Notes
 
-## Array Operations
+## 1. What Is an Array?
 
-### Access
+An array stores multiple elements of the same data type in an indexed collection.
 
-Accessing an element using its index:
+In Java, array indexing starts at `0`, and the length is available through the `length` property.
 
 ```java
-int value = numbers[i];
+int[] numbers = {10, 20, 30, 40};
+System.out.println(numbers[0]); // 10
+System.out.println(numbers.length); // 4
 ```
-Time Complexity: O(1)
 
-Because an array provides direct access using an index.
+## 2. Common Array Operation Complexities
 
-### Searching
+| Operation | Typical Time Complexity |
+|---|---|
+| Access by index | O(1) |
+| Linear search | O(n) |
+| Insert at an arbitrary position | O(n) |
+| Delete at an arbitrary position | O(n) |
+| Traverse the array | O(n) |
 
-Linear search checks elements one by one.
+Insertion and deletion can require shifting elements. These complexities assume a standard fixed-size Java array.
 
-Time Complexity: O(n)
+## 3. In-Place Operations
 
-### Insertion
+An in-place operation modifies the original array instead of creating another array for the transformed result.
 
-Inserting an element into the middle of an array may require
-shifting existing elements.
+Examples include swapping elements, reversing an array using two pointers, and moving elements using a position pointer.
 
-Time Complexity: O(n)
+In-place algorithms often use O(1) auxiliary space, excluding the input array and any output required by the problem.
 
-Insertion at the end can be O(1) when capacity is available,
-but for a fixed-size Java array, insertion requires creating or
-managing another array.
+## 4. Running Sum and Array Average
 
-### Deletion
+A running sum accumulates values as the array is traversed.
 
-Deleting an element from the middle may require shifting elements
-to fill the gap.
+The average is calculated by dividing the sum by the number of elements. An empty array must be handled before dividing by its length.
 
-Time Complexity: O(n)
+- Time Complexity: O(n)
+- Auxiliary Space: O(1)
 
-### In-Place Operations
+## 5. Counting Elements
 
-An in-place operation modifies the existing data structure instead
-of creating another data structure proportional to the input size.
+A counter can track how many elements satisfy a condition, such as being positive, negative, zero, or equal to a target.
 
-Example:
-```java
-int temp = numbers[i];
-numbers[i] = numbers[j];
-numbers[j] = temp;
-```
-If only a constant number of variables are used:
-Space Complexity: O(1)
+A single traversal takes O(n) time and O(1) auxiliary space when maintaining a fixed number of counters.
 
-### Extra Space
+## 6. Two-Pointer Technique
 
-Extra space refers to additional memory used by an algorithm apart
-from the input.
-
-Example:
-```java
-int[] copy = new int[n];
-```
-This requires: O(n) extra space.
-
-### Running Sum
-
-A running sum maintains the accumulated sum while traversing an array.
-
-Example:
-```java
-int sum = 0;
-
-for (int number : numbers) {
-    sum += number;
-}
-```
-Time Complexity: O(n)
-Space Complexity: O(1)
-
-### Prefix Sum / Range Sum
-
-A prefix sum stores cumulative sums of the elements.
-
-For:
-
-[5, 10, 15, 20]
-
-The prefix sum is:
-
-[5, 15, 30, 50]
-
-Once the prefix sum is created, a range sum can be calculated using
-the prefix values instead of traversing the entire range again.
-
-For a range from index left to right:
-
-rangeSum = prefix[right] - prefix[left - 1]
-
-For left = 0, the calculation is:
-
-rangeSum = prefix[right]
-
-#### Complexity
-Building the prefix sum:
-Time: O(n)
-Space: O(n)
-After preprocessing, a range-sum query can be answered in: O(1)
-This is useful when an array has many range-sum queries.
-
-### Two Pointer Technique
-
-Two pointers is a problem-solving technique where two indices are
-used to traverse or process an array.
-
-The pointers are often called:
-
-1. left
-2. right
-
-A common starting position is:
-
-left → beginning of array
-right → end of array
-
-Example:
-```java
-int left = 0;
-int right = numbers.length - 1;
-
-while (left < right) {
-
-    // process numbers[left] and numbers[right]
-
-    left++;
-    right--;
-}
-```
-Instead of using nested loops, two pointers can sometimes solve a problem with a single traversal.
-
-#### General idea
-
-[ 1  2  3  4  5  6 ]
-  ↑                 ↑
-left              right
-
-The pointers move according to the requirements of the problem.
-
-#### Benefits
-
-Two pointers can often:
-
-Reduce nested-loop solutions
-Avoid unnecessary extra arrays
-Allow in-place modification
-Reduce time complexity from O(n²) to O(n)
-
-Two pointers are especially common in:
-
-Sorted arrays
-Searching for pairs
-Removing elements
-Reordering arrays
-Comparing elements from both ends
-
-### Remove Duplicates from a Sorted Array
-
-For a sorted array, duplicate values appear next to each other.
-
-Example:
-
-[1, 1, 2, 2, 3, 3]
-
-The goal is to keep only one occurrence of each value.
-
-A two-pointer approach can be used.
-
-One pointer keeps track of the position where the next unique
-element should be placed, while another pointer scans the array.
-
-#### Example:
-
-[1, 1, 2, 2, 3, 3]
- ↑
-slow
-
-   ↑
-  fast
-
-When a new unique element is found, it is placed at the next
-available position.
-
-#### Complexity
-
-Time Complexity: O(n)
-Space Complexity: O(1)
-The array is modified in-place.
-
-### Move Zeroes
-
-The goal is to move all zeroes to the end of the array while
-maintaining the relative order of the non-zero elements.
-
-#### Example:
-
-Before:
-[0, 1, 0, 3, 12]
-
-After:
-[1, 3, 12, 0, 0]
-
-A two-pointer approach can be used.
-
-One pointer keeps track of the position where the next non-zero
-element should be placed.
-
-The other pointer scans the array.
-
-#### Important requirement
-
-The relative order of the non-zero elements should remain unchanged.
-
-#### Complexity
-
-Time Complexity: O(n)
-
-Space Complexity: O(1)
-
-This is an in-place array operation.
-
-### Move Negatives
-
-The goal is to rearrange an array so that negative elements are moved
-to one side of the array.
-
-#### Example:
-
-Before:
-[2, -3, 5, -1, 4, -6]
-
-After:
-[-3, -1, -6, 2, 5, 4]
-
-A two-pointer or partition-style approach can be used to rearrange
-the elements.
-
-The exact arrangement of the positive elements depends on the
-implementation and whether preserving their relative order is
-required.
-
-#### Complexity
-
-A typical in-place partition approach:
-
-Time Complexity: O(n)
-Space Complexity: O(1)
-
-### Count Positive and Negative Numbers
-
-The array can be traversed once while maintaining separate counters.
-
-Example:
-
-[5, -2, 0, 7, -4, 8]
-
-Result:
-
-Positive: 3
-Negative: 2
-Zero: 1
-
-The algorithm checks each element:
-
-if number > 0
-    positive++
-
-else if number < 0
-    negative++
-
-else
-    zero++
-
-#### Complexity
-
-Time Complexity: O(n)
-Space Complexity: O(1)
-
-### Two Sum
-
-The Two Sum problem asks us to find two elements whose sum equals
-a given target.
-
-Example:
-
-Array:
-[2, 7, 11, 15]
-
-Target:
-9
-
-The answer is:
-
-2 + 7 = 9
-
-#### Basic Approach
-
-For each element, check the remaining elements to find a pair that
-adds up to the target.
-
-This approach uses nested loops.
-
-Time Complexity: O(n²)
-
-Space Complexity: O(1)
-
-#### Important
-
-There are optimized approaches using a HashMap that can reduce the
-time complexity to O(n).
-
-However, the HashMap-based approach is intentionally deferred for
-later in this learning journey.
-
-The focus at this stage is understanding the array-based brute-force
-solution and the problem-solving process.
-
----
-
-## Important Patterns Learned
-
-The major patterns learned in Array Fundamentals are:
-
-### Pattern 1: Single Array Traversal
-
-Process every element once.
-
-Time: O(n)
-Space: O(1)
+The two-pointer technique uses two indices to solve a problem efficiently.
 
 Examples:
 
-Find Maximum
-Find Minimum
-Count Occurrences
-Array Sum
-Count Positive/Negative
+- One pointer tracks the next position for a valid element.
+- Two pointers move inward to reverse an array.
+- Two pointers traverse two sorted arrays during a merge.
 
-### Pattern 2: Two Pointers
+The correct pointer movement depends on the problem's constraints.
 
-Use two indices to process an array efficiently.
+## 7. Removing Duplicates from a Sorted Array
 
-Time: Usually O(n)
-Space: Usually O(1)
+For a sorted array, a position pointer can track where the next unique element belongs.
 
-Examples:
+When a new value differs from the previous unique value, write it at the next valid position.
 
-Remove Duplicates
-Move Zeroes
-Move Negatives
-Two Sum with suitable array conditions
+This approach can run in O(n) time and O(1) auxiliary space when modifying the original array.
 
-### Pattern 3: Prefix Sum
+## 8. Moving Zeroes
 
-Precompute cumulative values to answer repeated range-sum queries
-efficiently.
+The goal is to move zeroes to the end while preserving the relative order of non-zero elements.
 
-Build Prefix Sum:
-Time: O(n)
-Space: O(n)
+A position pointer can track where the next non-zero value should be written. Depending on the implementation, the remaining positions are then filled with zeroes.
 
-Range Query:
-Time: O(1)
+- Time Complexity: O(n)
+- Auxiliary Space: O(1)
 
-### Key Takeaways
+## 9. Moving Negative Elements
 
-Array access by index is O(1).
-Traversing an array once is O(n).
-Nested loops often lead to O(n²).
-In-place algorithms can reduce extra space to O(1).
-Two pointers can eliminate unnecessary nested loops in many problems.
-Prefix sums trade O(n) preprocessing and space for O(1) range queries.
-Always analyze both time and space complexity.
-Understand the brute-force approach before learning optimized techniques.
+A partition-style approach places negative elements on one side and non-negative elements on the other.
+
+If the problem does not require preserving the original order, swapping elements can be used to partition the array in place.
+
+- Typical Time Complexity: O(n)
+- Auxiliary Space: O(1)
+
+## 10. Prefix Sums
+
+A prefix-sum array stores cumulative totals.
+
+For an array `numbers`, the prefix sum at index `i` represents the sum from index `0` through index `i`.
+
+A range sum from index `left` to index `right`, inclusive, can be calculated using:
+
+`prefix[right] - prefix[left - 1]`
+
+When `left == 0`, use `prefix[right]` directly.
+
+- Preprocessing Time: O(n)
+- Prefix Array Space: O(n)
+- Each Range-Sum Query: O(1)
+
+## 11. Two Sum — Brute Force
+
+The brute-force solution checks every possible pair of elements until it finds a pair whose sum equals the target.
+
+- Time Complexity: O(n²)
+- Auxiliary Space: O(1)
+
+The optimized HashMap-based solution is intentionally postponed until the planned hashing section.
+
+## 12. Connection to Intermediate Array Problems
+
+The fundamentals in this section support the next stage of practice:
+
+- Traversal and accumulation → Missing Number and Frequency of an Element.
+- Nested loops → Find Duplicate and Intersection of Two Arrays.
+- Shifting and swapping → Array Rotation.
+- Two pointers → Optimized Array Rotation and Merge Two Sorted Arrays.
+
+## Day 2 Completion
+
+The foundational array problems and concepts have been completed. Continue to the `Intermediate/` folder for the next set of problems.

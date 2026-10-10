@@ -119,3 +119,77 @@ we create a new array whose size depends on n, so:
 Space Complexity = O(n)
 
 This distinction between input space and auxiliary space is very important in DSA.
+
+
+# Time and Space Complexity — Notes
+
+## 1. Time Complexity
+
+Time complexity describes how an algorithm's running time grows as the input size increases.
+
+| Complexity | Common Example |
+|---|---|
+| O(1) | Accessing an array element by index |
+| O(log n) | Binary search on sorted data |
+| O(n) | Traversing an array |
+| O(n log n) | Efficient comparison-based sorting |
+| O(n²) | Comparing every pair using nested loops |
+
+## 2. Space Complexity
+
+Space complexity describes how memory usage grows with input size.
+
+Auxiliary space refers to the extra working memory used by an algorithm, excluding the input itself.
+
+| Auxiliary Space | Example |
+|---|---|
+| O(1) | A fixed number of counters or temporary variables |
+| O(n) | Creating an additional array proportional to the input |
+| O(n) | Storing all input elements in a separate collection |
+| O(log n) | Recursive calls with logarithmic recursion depth |
+
+## 3. Nested Loops
+
+Nested loops are not automatically O(n²).
+
+- If both loops iterate proportionally to `n`, the complexity is typically O(n²).
+- If the inner loop performs a fixed number of iterations, the total can be O(n).
+- If one loop iterates over `n` elements and the other over `m` elements, the complexity can be O(n × m).
+
+## 4. Complexity of Completed Array Problems
+
+| Problem | Time Complexity | Auxiliary Space |
+|---|---|---|
+| Find Maximum / Minimum | O(n) | O(1) |
+| Linear Search | O(n) | O(1) |
+| Array Sum / Average | O(n) | O(1) |
+| Frequency of an Element | O(n) | O(1) |
+| Find Duplicate — nested loops | O(n²) | O(1) |
+| Missing Number — sum formula | O(n) | O(1) |
+| Rotate Array by K — repeated rotation | O(n × k) | O(1) |
+| Rotate Array by K — reversal | O(n) | O(1) |
+| Brute-force Two Sum | O(n²) | O(1) |
+| Merge Two Sorted Arrays | O(n + m) | O(n + m) for the result array |
+
+For Intersection of Two Arrays, a nested-loop implementation typically takes O(n × m) time. Space complexity depends on how the intersection result is stored and whether additional storage is used.
+
+For Range Sum, building a prefix-sum array takes O(n) time and O(n) space. Each query then takes O(1) time.
+
+## 5. Why Complexity Analysis Matters
+
+Complexity analysis helps compare approaches and understand how they scale.
+
+For example, rotating an array by repeatedly shifting elements takes O(n × k) time, while the reversal technique rotates it in O(n) time.
+
+Both solutions can use O(1) auxiliary space, but the reversal technique is more efficient for large inputs.
+
+## Learning Progress
+
+- [x] Time complexity fundamentals
+- [x] Space complexity and auxiliary space
+- [x] Array traversal and searching
+- [x] Nested-loop analysis
+- [x] Prefix-sum preprocessing and queries
+- [x] Brute-force versus optimized array approaches
+- [x] Reversal-based array rotation
+- [x] Merging sorted arrays using pointers

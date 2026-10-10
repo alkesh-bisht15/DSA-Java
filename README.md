@@ -43,6 +43,7 @@ notes, and solutions as I progress through DSA.
 | Time & Space Complexity | ✅ |
 | Array Basics | ✅ |
 | Array Fundamentals | ✅ |
+| Intermediate Array Problems | ✅ |
 | Strings | ⏳ |
 | Linked List | ⏳ |
 | Stack | ⏳ |
@@ -84,6 +85,17 @@ Topics learned:
 - Array Average
 - Count Positive & Negative
 - Maximum-Minimum Difference
+
+### Day 3 — Intermediate Array Problems
+
+- Missing Number
+- Find Duplicate
+- Frequency of an Element
+- Rotate Array by One
+- Rotate Array by K — Repeated Rotation
+- Rotate Array by K — Optimized Reversal Technique
+- Intersection of Two Arrays
+- Merge Two Sorted Arrays
 
 ### Learning Approach
 
