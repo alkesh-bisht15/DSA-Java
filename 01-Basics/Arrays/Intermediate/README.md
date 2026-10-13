@@ -63,3 +63,36 @@ For arrays of lengths `n` and `m`, the merge takes O(n + m) time. The returned r
 - [x] Merge Two Sorted Arrays
 
 All eight Day 3 problems have been completed.
+
+
+## Day 4 — Array Problem Solving
+
+### Problems Completed
+
+| # | Problem | Main Concept |
+|---:|---|---|
+| 1 | Left Rotate Array by One | Element shifting |
+| 2 | Left Rotate Array by K | Rotation and modulo |
+| 3 | Union of Arrays | Combining unique elements |
+| 4 | Best Time to Buy and Sell Stock | Single-pass optimization |
+| 5 | Maximum Consecutive Ones | Counting consecutive elements |
+
+### Concepts Practiced
+
+- Left rotation by one position.
+- Left rotation by `k` positions.
+- Using `k % n` to avoid unnecessary rotations.
+- Finding unique elements across arrays.
+- Tracking minimum prices and maximum profit.
+- Counting consecutive ones in a binary array.
+- Improving problem-solving through traversal and pointer techniques.
+
+### Day 4 Status
+
+- [x] Left Rotate Array by One
+- [x] Left Rotate Array by K
+- [x] Union of Arrays
+- [x] Best Time to Buy and Sell Stock
+- [x] Maximum Consecutive Ones
+
+**Day 4: Completed**

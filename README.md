@@ -35,6 +35,7 @@ notes, and solutions as I progress through DSA.
 - Greedy Algorithms
 - Dynamic Programming
 
+
 ## 📈 Progress
 
 | Topic | Status |
@@ -96,6 +97,14 @@ Topics learned:
 - Rotate Array by K — Optimized Reversal Technique
 - Intersection of Two Arrays
 - Merge Two Sorted Arrays
+
+### Day 4 - More Intermediate Array Problems
+
+- Left Rotate Array by One
+- Left Rotate Array by K
+- Union of two Arrays
+- Best Time to Buy and Sell Stocks
+- Max Consecutive Ones in a Binary Array
 
 ### Learning Approach
 
