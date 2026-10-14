@@ -55,6 +55,34 @@ notes, and solutions as I progress through DSA.
 | Graphs | ⏳ |
 | Dynamic Programming | ⏳ |
 
+
+
+## 💻 LeetCode Practice
+
+I am solving LeetCode problems using Java alongside my structured DSA learning roadmap.
+
+| Metric | Progress |
+|---|---|
+| Total Problems Solved | 7 |
+| Easy | 7 |
+| Medium | 0 |
+| Hard | 0 |
+| Current Focus | Arrays and Two Pointers |
+
+### Problems Practiced
+
+- [x] Two Sum
+- [x] Remove Element
+- [x] Remove Duplicates from a Sorted Array
+- [x] Plus One
+- [x] Merge Sorted Array
+- [x] Best Time to Buy and Sell Stock
+- [x] Move Zeroes
+
+**Language:** Java
+
+**Solutions:** [Browse my LeetCode solutions](./LeetCode/)
+
 ## 🗓️ Learning Progress
 
 ### Day 1 — DSA Fundamentals & Array Basics ✅
