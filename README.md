@@ -45,6 +45,7 @@ notes, and solutions as I progress through DSA.
 | Array Basics | ✅ |
 | Array Fundamentals | ✅ |
 | Intermediate Array Problems | ✅ |
+| Binary Search | ✅ |
 | Strings | ⏳ |
 | Linked List | ⏳ |
 | Stack | ⏳ |
@@ -54,6 +55,7 @@ notes, and solutions as I progress through DSA.
 | Trees | ⏳ |
 | Graphs | ⏳ |
 | Dynamic Programming | ⏳ |
+
 
 
 
@@ -134,6 +136,10 @@ Topics learned:
 - Best Time to Buy and Sell Stocks
 - Max Consecutive Ones in a Binary Array
 
+### Day 5 - Binary Search Fundamentals
+
+- Basic Implementation
+- Solved one Problem on LeetCode
 ### Learning Approach
 
 For every topic, I aim to:

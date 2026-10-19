@@ -19,8 +19,8 @@ This directory contains my LeetCode problem-solving journey using Java.
 
 | Metric | Count |
 |---|---:|
-| Total Problems Solved | 7 |
-| Easy Problems | 7 |
+| Total Problems Solved | 8 |
+| Easy Problems | 8 |
 | Medium Problems | 0 |
 | Hard Problems | 0 |
 
@@ -35,6 +35,7 @@ This directory contains my LeetCode problem-solving journey using Java.
 | 88 | Merge Sorted Array | Easy | Arrays, Two Pointers | ✅ Solved |
 | 121 | Best Time to Buy and Sell Stock | Easy | Arrays, Greedy | ✅ Solved |
 | 283 | Move Zeroes | Easy | Arrays, Two Pointers | ✅ Solved |
+| 35 | Search Insert Position | Easy | Binary Search | ✅ Solved |
 
 ## Current Focus
 
@@ -42,6 +43,7 @@ This directory contains my LeetCode problem-solving journey using Java.
 - In-place algorithms
 - Two-pointer technique
 - Tracking time and space complexity
+- Binary Search
 
 ## Problem-Solving Approach
 
